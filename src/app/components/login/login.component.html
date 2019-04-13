@@ -1,0 +1,46 @@
+<div class="imageblur">
+    <div style="margin-top: 20%;"></div>
+    <h1 style="margin-left: 5%;">Login</h1>
+    <div style="margin-bottom: 5%;"></div>
+    <div class="form">
+    <form #loginForm=ngForm (ngSubmit)="onSubmit()">
+
+        <div class="alert alert-danger" [hidden]="!error">
+            {{error}}
+        </div>
+
+        <div class="tab" style="color: #d44f63">
+            <label for="inputEmail3" class="">Email:</label>
+            <div>
+                <input type="email" name="email" class="input" id="inputEmail3" placeholder=""
+                       [(ngModel)]="form.email" required>
+            </div>
+        </div>
+
+        <div class="tab" style="color: #d44f63">
+            <label for="inputPassword3" class="">Password:</label>
+            <div class="">
+                <input type="password" name="password" class="input" id="inputPassword3"
+                       placeholder="" [(ngModel)]="form.password" required>
+            </div>
+        </div>
+
+        <div style="margin-top: 5%;"></div>
+
+        <div >
+            <div class="">
+                <button type="submit" class="button buttonPink" [disabled]="!loginForm.valid">Sign in</button>
+                <a routerLink="/signup" class="button buttonBlack float-right">Create Profile</a>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <div>
+        <small class="float-bottom">
+            <a routerLink="/request-password-reset">Reset Password</a>
+        </small>
+    </div>
+</div>
+
+
