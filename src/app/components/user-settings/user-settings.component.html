@@ -1,0 +1,24 @@
+{{userId}}
+
+<div class="form">
+  <form #userSettingsForm=ngForm (ngSubmit)="onSubmit()">
+
+    <div class="tab" style="color: #d44f63">
+      <label for="uploadImage" class="">Image:</label>
+      <div>
+        <!--<input type="hidden" name="someData" value="{{userId}}" [(ngModel)]="form.id" />-->
+
+        <input type="file" name="uploads" class="input" id="uploads" placeholder=""
+               [(ngModel)]="form.uploads" (change)="onFileSelected($event)" >
+      </div>
+    </div>
+
+    <div style="margin-top: 5%;"></div>
+
+    <div >
+      <div class="">
+        <button type="submit" class="button buttonPink" [disabled]="!userSettingsForm.valid">Update Profile</button>
+      </div>
+    </div>
+  </form>
+</div>

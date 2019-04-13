@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.ng-invalid:not(form) {
+    color: green;
+    border-bottom: 5px solid;
+
+}
+
+.ng-valid:not(form) {
+    border-bottom: 5px solid;
+    border-color: red;
+}
+
+.imageNoblur {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("../src/images/mainBack.jpg");
+    background-repeat: no-repeat; /*Avoid the image to repeat*/
+    background-size: cover; /*Make the image full size*/
+    background-position: center; /*Center the img*/
+}
+
+.imageblur {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("../src/images/mainBackBlur.jpg");
+    background-repeat: no-repeat; /*Avoid the image to repeat*/
+    background-size: cover; /*Make the image full size*/
+    background-position: center; /*Center the img*/
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+.tab {
+    margin-top: 1em;
+}
+
+.buttonPink {
+    background-color: #d44f63;
+}
+
+.buttonBlack {
+    background-color: #050304;
+}
